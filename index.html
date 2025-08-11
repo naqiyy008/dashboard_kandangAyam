@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Monitoring Kandang Ayam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <header class="header-row">
+            <div class="logo-title">
+                <img src="ayam.png" alt="Logo Ayam" />
+                <div>
+                    <h1>DASHBOARD MONITORING KANDANG AYAM</h1>
+                    <p>Selamat Datang! <span class="highlight">Ayam Sehat, Telurpun Lezat!</span></p>
+                    <div class="clock" id="clock">13:41:30</div>
+                </div>
+            </div>
+            <div class="panel grafik-header">
+                <h2>Grafik Suhu & Kelembapan</h2>
+                <canvas id="sensorChart"></canvas>
+            </div>
+        </header>
+
+        <main class="main-panels">
+            <section class="panel kandang">
+                <h2>Kandangku</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3><i class="bi bi-lightbulb"></i> Jumlah Ayam</h3>
+                        <p>3200 <span>ekor</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3><i class="bi bi-person"></i> Jumlah Pakan</h3>
+                        <p>510 <span>Kg</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3><i class="bi bi-droplet-fill"></i> Air Minum</h3>
+                        <p>180 <span>L</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel kontrol">
+                <h2>⚙️ Kontrol Peralatan</h2>
+                <br>
+                <div class="stats-kontrol">
+                    <div class="stat-card-kontrol fan">
+                        <div class="card-info">
+                            <h3><i class="bi bi-fan"></i> Kipas</h3>
+                            <p>Status: <span class="status">Mati</span></p>
+                        </div>
+                        <button><i class="bi bi-power"></i> Nyalakan</button>
+                    </div>
+                    <br>
+                    <div class="stat-card-kontrol pump">
+                        <div class="card-info">
+                            <h3><i class="bi bi-water"></i> Pompa</h3>
+                            <p>Status: <span class="status">Mati</span></p>
+                        </div>
+                        <button><i class="bi bi-power"></i> Nyalakan</button>
+                    </div>
+                    <br>
+
+                    <div class="stat-card-kontrol feed">
+                        <div class="card-info">
+                            <h3><i class="bi bi-basket3"></i> Pakan</h3>
+                            <p>Status: <span class="status">Mati</span></p>
+                        </div>
+                        <button><i class="bi bi-power"></i> Nyalakan</button>
+                    </div>
+                    <br>
+                </div>
+            </section>
+
+            <section class="panel intensitas">
+                <h2>💡 Intensitas Cahaya</h2>
+                <p>Status Lampu: <span class="on">MENYALA</span></p>
+                <p class="big-text">48699 Lux</p>
+            </section>
+
+            <section class="panel lokasi">
+                <h2>🏔️ Ketinggian Lokasi</h2>
+                <p>Dari permukaan laut</p>
+                <p class="big-text">452.8 mdpl</p>
+            </section>
+
+            <section class="panel suhu">
+                <h2>🌡️ Suhu Kandang</h2>
+                <p>Status: <span class="ideal">IDEAL</span></p>
+                <p class="big-temp">27.6°C</p>
+                <div class="bar">
+                    <div class="green"></div>
+                    <div class="gray"></div>
+                </div>
+                <p class="rekomendasi">Rekomendasi: <b>24–30°C</b> untuk ayam petelur</p>
+            </section>
+
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

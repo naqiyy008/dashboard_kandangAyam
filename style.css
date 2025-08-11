@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #101020;
+    color: white;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+header.header-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    background: #1e1e2e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.logo-title img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.logo-title div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-title h1 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    color: #00d4ff;
+}
+
+.clock {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.panel {
+    background: #1e1e2e;
+    border-radius: 12px;
+    padding: 15px 20px;
+    color: white;
+}
+
+.grafik-header {
+    flex: 1;
+    max-width: 50%;
+}
+
+.panel h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* GRID UTAMA */
+.main-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40%;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.panel.kandang {
+    grid-column: 1 / span 2;
+}
+
+.panel.intensitas {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.panel.suhu {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;      
+    gap: 5px;
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    height: calc(160px * 2 + 15px);
+
+}
+
+.panel.lokasi {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.panel.kontrol {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.stats .stat-card {
+    background: #2d2d3d;
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.stats .stat-card h3 {
+    font-size: 14px;
+    color: #ffd700;
+}
+
+.stats .stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats-kontrol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-card-kontrol {
+    padding: 45px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card-kontrol .card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card-kontrol h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.stat-card-kontrol p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.stat-card-kontrol button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-card-kontrol button:hover {
+    background: #45a049;
+}
+
+.fan {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+.pump {
+    background: linear-gradient(45deg, #1c92d2, #f2fcfe);
+    color: black;
+}
+
+.feed {
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+    color: black;
+}
+
+.intensitas {
+    background: #ffd200;
+    color: black;
+}
+
+.intensitas .on {
+    color: green;
+    font-weight: bold;
+}
+
+.big-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.suhu .big-temp {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.suhu .ideal {
+    color: #00ff99;
+    font-weight: bold;
+}
+
+.bar {
+    display: flex;
+    height: 10px;
+    margin: 10px 0;
+}
+
+.bar .green {
+    background: #00ff99;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+
+.bar .gray {
+    background: #ccc;
+    width: 20%;
+    border-radius: 0 5px 5px 0;
+}
+
+.rekomendasi {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.panel.intensitas,
+.panel.suhu {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.panel.intensitas p,
+.panel.suhu p {
+    margin: 0;
+
+}
+
+.panel.intensitas {
+    box-shadow: 0 0 15px #ffd200; 
+}
+
+.panel.suhu {
+    box-shadow: 0 0 15px #8a2be2; 
+}
+
+.panel.lokasi {
+    box-shadow: 0 0 15px #00d4ff;
+}
+
+.panel.kandang {
+    box-shadow: 0 0 15px #ff69b4; 
+}
+
+.panel.kontrol {
+    box-shadow: 0 0 15px rgba(247, 247, 247, 0.3); 
+}
+
+.logo-title {
+    box-shadow: 0 0 15px #8a2be2; 
+}
+
+.grafik-header {
+    box-shadow: 0 0 15px #00d4ff;
+}
